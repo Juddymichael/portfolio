@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Juddy Michaël RANAIVOZANANY — Assistant Commercial Freelance</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --navy: #0D2340;
+    --navy-light: #1A3A5C;
+    --accent: #C8A96E;
+    --accent-light: #E8D5A8;
+    --cream: #F9F6F0;
+    --white: #FFFFFF;
+    --text: #1A1A2E;
+    --text-muted: #556080;
+    --border: #E2DDD5;
+    --success: #2A7D5F;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  /* ── NAVIGATION ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(249,246,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 2rem;
+    display: flex; align-items: center; justify-content: space-between;
+    height: 64px;
+  }
+  .nav-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    letter-spacing: 0.02em;
+  }
+  .nav-logo span { color: var(--accent); }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-muted);
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--navy); }
+  .nav-cta {
+    background: var(--navy);
+    color: var(--white) !important;
+    padding: 0.5rem 1.25rem !important;
+    border-radius: 2px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.08em !important;
+    font-size: 0.78rem !important;
+    transition: background 0.2s !important;
+  }
+  .nav-cta:hover { background: var(--navy-light) !important; color: var(--white) !important; }
+
+  /* ── HERO ── */
+  #hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding-top: 64px;
+  }
+  .hero-left {
+    background: var(--navy);
+    padding: 6rem 4rem 4rem;
+    display: flex; flex-direction: column; justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero-left::before {
+    content: '';
+    position: absolute; top: -60px; right: -60px;
+    width: 280px; height: 280px;
+    border: 2px solid rgba(200,169,110,0.15);
+    border-radius: 50%;
+  }
+  .hero-left::after {
+    content: '';
+    position: absolute; bottom: 80px; left: -40px;
+    width: 160px; height: 160px;
+    border: 1px solid rgba(200,169,110,0.1);
+    border-radius: 50%;
+  }
+  .hero-tag {
+    font-size: 0.72rem;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .hero-tag::before {
+    content: '';
+    width: 32px; height: 1px;
+    background: var(--accent);
+  }
+  .hero-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2.8rem, 4vw, 3.8rem);
+    color: var(--white);
+    line-height: 1.08;
+    margin-bottom: 0.25rem;
+  }
+  .hero-name em {
+    font-style: italic;
+    color: var(--accent-light);
+  }
+  .hero-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(1rem, 1.5vw, 1.25rem);
+    color: rgba(255,255,255,0.5);
+    font-style: italic;
+    margin-bottom: 2rem;
+    font-weight: 400;
+  }
+  .hero-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.7);
+    line-height: 1.75;
+    max-width: 400px;
+    margin-bottom: 2.5rem;
+  }
+  .hero-desc strong { color: var(--accent-light); font-weight: 500; }
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--accent);
+    color: var(--navy);
+    padding: 0.85rem 2rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-primary:hover { background: var(--accent-light); transform: translateY(-1px); }
+  .btn-outline {
+    border: 1px solid rgba(255,255,255,0.3);
+    color: rgba(255,255,255,0.8);
+    padding: 0.85rem 2rem;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+  .btn-outline:hover { border-color: rgba(255,255,255,0.7); color: var(--white); }
+  .hero-contact {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex; gap: 2rem;
+  }
+  .hero-contact-item {
+    display: flex; flex-direction: column; gap: 0.2rem;
+  }
+  .hero-contact-label {
+    font-size: 0.68rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: rgba(255,255,255,0.35);
+  }
+  .hero-contact-value {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+  }
+  .hero-contact-value:hover { color: var(--accent); }
+
+  .hero-right {
+    background: var(--cream);
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 5rem 4rem;
+  }
+  .hero-stats {
+    display: grid; grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+  }
+  .stat-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 1.75rem 1.5rem;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: var(--accent);
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.3s;
+  }
+  .stat-card:hover::after { transform: scaleX(1); }
+  .stat-num {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.4rem;
+    color: var(--navy);
+    line-height: 1;
+    margin-bottom: 0.4rem;
+  }
+  .stat-num span { font-size: 1.4rem; color: var(--accent); }
+  .stat-label {
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 400;
+    line-height: 1.4;
+  }
+  .availability-badge {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: #EAF7F0;
+    border: 1px solid #B6E4CF;
+    color: var(--success);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.6rem 1.25rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+  }
+  .availability-dot {
+    width: 8px; height: 8px;
+    background: var(--success);
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .hero-right-quote {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    border-left: 2px solid var(--accent);
+    margin-top: 1.5rem;
+  }
+
+  /* ── SECTIONS ── */
+  section { padding: 5rem 0; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+  .section-label {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.75rem;
+    display: flex; align-items: center; gap: 0.75rem;
+  }
+  .section-label::before {
+    content: '';
+    width: 24px; height: 1px;
+    background: var(--accent);
+  }
+  .section-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: clamp(2rem, 3vw, 2.6rem);
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 1rem;
+  }
+  .section-intro {
+    font-size: 1rem;
+    color: var(--text-muted);
+    max-width: 560px;
+    line-height: 1.75;
+  }
+
+  /* ── SERVICES ── */
+  #services { background: var(--white); }
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5px;
+    background: var(--border);
+    border: 1.5px solid var(--border);
+    margin-top: 3rem;
+  }
+  .service-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: background 0.2s;
+  }
+  .service-card:hover { background: var(--cream); }
+  .service-icon {
+    width: 48px; height: 48px;
+    background: var(--navy);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+  }
+  .service-num {
+    position: absolute; top: 1.5rem; right: 1.75rem;
+    font-family: 'DM Serif Display', serif;
+    font-size: 3rem;
+    color: var(--border);
+    line-height: 1;
+    font-style: italic;
+  }
+  .service-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.25rem;
+    color: var(--navy);
+    margin-bottom: 0.75rem;
+  }
+  .service-desc {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    line-height: 1.7;
+    margin-bottom: 1.25rem;
+  }
+  .service-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag {
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    background: var(--cream);
+    color: var(--text-muted);
+    padding: 0.3rem 0.7rem;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+  }
+
+  /* ── EXPERIENCE ── */
+  #experience { background: var(--cream); }
+  .exp-layout { display: grid; grid-template-columns: 280px 1fr; gap: 4rem; margin-top: 3rem; }
+  .exp-nav { position: sticky; top: 100px; height: fit-content; }
+  .exp-nav-item {
+    display: block;
+    padding: 1rem 0;
+    border-bottom: 1px solid var(--border);
+    text-decoration: none;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  .exp-nav-item:first-child { border-top: 1px solid var(--border); }
+  .exp-nav-date { font-size: 0.7rem; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.25rem; }
+  .exp-nav-company {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--navy);
+  }
+  .exp-nav-item.active .exp-nav-company { color: var(--accent); }
+  .exp-nav-item.active { border-bottom-color: var(--accent); }
+
+  .exp-entries { display: flex; flex-direction: column; gap: 3rem; }
+  .exp-entry {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 2.5rem;
+    border-radius: 4px;
+    position: relative;
+  }
+  .exp-entry-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 0.5rem; }
+  .exp-role {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.4rem;
+    color: var(--navy);
+  }
+  .exp-period {
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(200,169,110,0.1);
+    padding: 0.35rem 0.85rem;
+    border-radius: 2px;
+    white-space: nowrap;
+    margin-left: 1rem;
+  }
+  .exp-company {
+    font-size: 0.88rem;
+    color: var(--text-muted);
+    font-style: italic;
+    margin-bottom: 1.25rem;
+  }
+  .exp-highlight {
+    background: rgba(13,35,64,0.04);
+    border-left: 3px solid var(--accent);
+    padding: 0.85rem 1rem;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: var(--navy);
+    margin-bottom: 1.5rem;
+    border-radius: 0 2px 2px 0;
+  }
+  .exp-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+  .exp-list li {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  .exp-list li::before {
+    content: '';
+    position: absolute; left: 0; top: 0.55em;
+    width: 6px; height: 1px;
+    background: var(--accent);
+  }
+  .exp-list strong { color: var(--navy); font-weight: 500; }
+
+  /* ── SKILLS ── */
+  #competences { background: var(--navy); }
+  #competences .section-title { color: var(--white); }
+  #competences .section-intro { color: rgba(255,255,255,0.55); }
+  #competences .section-label { color: var(--accent-light); }
+  #competences .section-label::before { background: var(--accent-light); }
+  .skills-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; margin-top: 3rem; }
+  .skill-group-title {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.1rem;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+  .skill-item { margin-bottom: 1.25rem; }
+  .skill-header {
+    display: flex; justify-content: space-between;
+    margin-bottom: 0.4rem;
+  }
+  .skill-name { font-size: 0.88rem; color: rgba(255,255,255,0.8); }
+  .skill-level { font-size: 0.78rem; color: rgba(255,255,255,0.4); }
+  .skill-bar {
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 1px;
+  }
+  .skill-fill {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 1px;
+    transition: width 1s ease;
+  }
+  .tools-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+  .tool-item {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 0.75rem 1rem;
+    border-radius: 2px;
+    font-size: 0.82rem;
+    color: rgba(255,255,255,0.65);
+    display: flex; align-items: center; gap: 0.5rem;
+  }
+  .tool-dot { width: 5px; height: 5px; background: var(--accent); border-radius: 50%; flex-shrink: 0; }
+  .lang-item {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+  }
+  .lang-name { font-size: 0.9rem; color: rgba(255,255,255,0.75); }
+  .lang-badge {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: rgba(200,169,110,0.12);
+    padding: 0.25rem 0.75rem;
+    border-radius: 2px;
+  }
+
+  /* ── OFFRES ── */
+  #offres { background: var(--cream); }
+  .offres-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 3rem; }
+  .offre-card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    padding: 2.5rem 2rem;
+    border-radius: 4px;
+    display: flex; flex-direction: column;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  .offre-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.07); }
+  .offre-card.featured {
+    background: var(--navy);
+    border-color: var(--navy);
+  }
+  .offre-badge {
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px;
+    margin-bottom: 1.5rem;
+    width: fit-content;
+  }
+  .offre-badge.standard { background: var(--cream); color: var(--text-muted); border: 1px solid var(--border); }
+  .offre-badge.popular { background: var(--accent); color: var(--navy); }
+  .offre-badge.premium { background: rgba(200,169,110,0.15); color: var(--accent); border: 1px solid rgba(200,169,110,0.3); }
+  .offre-name {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .offre-card.featured .offre-name { color: var(--white); }
+  .offre-price {
+    font-family: 'DM Serif Display', serif;
+    font-size: 2.2rem;
+    color: var(--accent);
+    line-height: 1;
+    margin-bottom: 0.25rem;
+  }
+  .offre-period { font-size: 0.78rem; color: var(--text-muted); margin-bottom: 1.75rem; }
+  .offre-card.featured .offre-period { color: rgba(255,255,255,0.4); }
+  .offre-features { list-style: none; flex: 1; margin-bottom: 2rem; display: flex; flex-direction: column; gap: 0.7rem; }
+  .offre-features li {
+    font-size: 0.87rem;
+    color: var(--text-muted);
+    padding-left: 1.25rem;
+    position: relative;
+  }
+  .offre-card.featured .offre-features li { color: rgba(255,255,255,0.65); }
+  .offre-features li::before {
+    content: '✓';
+    position: absolute; left: 0;
+    color: var(--accent);
+    font-size: 0.8rem;
+  }
+  .offre-btn {
+    display: block;
+    text-align: center;
+    padding: 0.85rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.2s;
+  }
+  .offre-btn.dark { background: var(--navy); color: var(--white); }
+  .offre-btn.dark:hover { background: var(--navy-light); }
+  .offre-btn.gold { background: var(--accent); color: var(--navy); }
+  .offre-btn.gold:hover { background: var(--accent-light); }
+  .offre-btn.outline { border: 1px solid rgba(255,255,255,0.25); color: rgba(255,255,255,0.85); }
+  .offre-btn.outline:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* ── CONTACT ── */
+  #contact { background: var(--white); }
+  .contact-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-top: 3rem; }
+  .contact-info { display: flex; flex-direction: column; gap: 2rem; }
+  .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+  .contact-icon {
+    width: 44px; height: 44px; flex-shrink: 0;
+    background: var(--cream);
+    border: 1px solid var(--border);
+    border-radius: 2px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.1rem;
+  }
+  .contact-item-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); margin-bottom: 0.2rem; }
+  .contact-item-value { font-size: 0.95rem; color: var(--navy); font-weight: 500; }
+  .contact-item-value a { color: var(--navy); text-decoration: none; }
+  .contact-item-value a:hover { color: var(--accent); }
+
+  .contact-form { display: flex; flex-direction: column; gap: 1.25rem; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; }
+  .form-label { font-size: 0.78rem; font-weight: 500; letter-spacing: 0.05em; text-transform: uppercase; color: var(--text-muted); }
+  .form-input, .form-select, .form-textarea {
+    border: 1px solid var(--border);
+    padding: 0.8rem 1rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: var(--white);
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 100%;
+  }
+  .form-input:focus, .form-select:focus, .form-textarea:focus { border-color: var(--navy); }
+  .form-textarea { resize: vertical; min-height: 120px; }
+  .form-submit {
+    background: var(--navy);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2rem;
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: background 0.2s;
+    align-self: flex-start;
+  }
+  .form-submit:hover { background: var(--navy-light); }
+
+  /* ── FOOTER ── */
+  footer {
+    background: var(--navy);
+    padding: 2.5rem 2rem;
+  }
+  .footer-inner {
+    max-width: 1100px; margin: 0 auto;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 1rem; flex-wrap: wrap;
+  }
+  .footer-logo {
+    font-family: 'DM Serif Display', serif;
+    font-size: 1rem;
+    color: rgba(255,255,255,0.6);
+  }
+  .footer-logo span { color: var(--accent); }
+  .footer-text { font-size: 0.8rem; color: rgba(255,255,255,0.3); }
+  .footer-links { display: flex; gap: 1.5rem; }
+  .footer-links a { font-size: 0.78rem; color: rgba(255,255,255,0.4); text-decoration: none; transition: color 0.2s; }
+  .footer-links a:hover { color: var(--accent); }
+
+  /* ── ANIMATIONS ── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .fade-up { animation: fadeUp 0.65s ease forwards; }
+  .fade-up:nth-child(2) { animation-delay: 0.1s; }
+  .fade-up:nth-child(3) { animation-delay: 0.2s; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 900px) {
+    #hero { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .hero-left { padding: 5rem 2rem 3rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .exp-layout { grid-template-columns: 1fr; }
+    .exp-nav { display: none; }
+    .skills-layout { grid-template-columns: 1fr; }
+    .offres-grid { grid-template-columns: 1fr; }
+    .contact-layout { grid-template-columns: 1fr; gap: 3rem; }
+    .nav-links { display: none; }
+    .form-row { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <div class="nav-logo">Juddy <span>M.</span></div>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#experience">Expérience</a></li>
+    <li><a href="#competences">Compétences</a></li>
+    <li><a href="#offres">Offres</a></li>
+    <li><a href="#contact" class="nav-cta">Travailler ensemble</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-left">
+    <div class="hero-tag">France · Suisse · Belgique · Québec — 100% Remote</div>
+    <h1 class="hero-name fade-up">Juddy<br>Michaël<br><em>Ranaivozanany</em></h1>
+    <p class="hero-title fade-up">Support client · Back-office · Assistance commerciale · 100% Remote</p>
+    <p class="hero-desc fade-up">
+      Je prends en charge l'opérationnel que votre équipe n'a pas le temps de gérer. <strong>Service client, back-office, qualification de leads, gestion administrative</strong> — je m'intègre à votre organisation et délivre sans que vous ayez à superviser chaque détail.
+    </p>
+    <div class="hero-btns fade-up">
+      <a href="#contact" class="btn-primary">Discutons de votre projet</a>
+      <a href="https://www.linkedin.com/in/juddy-michael-backoffice" target="_blank" class="btn-outline">LinkedIn</a>
+    </div>
+    <div class="hero-contact">
+      <div class="hero-contact-item">
+        <span class="hero-contact-label">Email</span>
+        <a href="mailto:ranaivozananyjuddy@gmail.com" class="hero-contact-value">ranaivozananyjuddy@gmail.com</a>
+      </div>
+      <div class="hero-contact-item">
+        <span class="hero-contact-label">Téléphone</span>
+        <a href="tel:+261344415818" class="hero-contact-value">034 44 158 18</a>
+      </div>
+      <div class="hero-contact-item">
+        <span class="hero-contact-label">Localisation</span>
+        <span class="hero-contact-value">Antananarivo, Madagascar</span>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="availability-badge">
+      <span class="availability-dot"></span>
+      Disponible immédiatement — Connexion stable · Backup en cas de coupure
+    </div>
+    <div class="hero-stats">
+      <div class="stat-card">
+        <div class="stat-num">3<span>+</span></div>
+        <div class="stat-label">Ans au service d'entreprises françaises en remote</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">2</div>
+        <div class="stat-label">Leaders français accompagnés (Autohero, Nickel)</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Disponibilité garantie — connexion dédiée avec solution de backup</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">FR</div>
+        <div class="stat-label">Français maîtrisé à l'oral et à l'écrit — atout principal</div>
+      </div>
+    </div>
+    <blockquote class="hero-right-quote">
+      "Je ne vous vends pas des heures. Je vous offre de la sérénité opérationnelle — pour que vous puissiez enfin vous concentrer sur ce qui compte."
+    </blockquote>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="container">
+    <p class="section-label">Ce que je fais pour vous</p>
+    <h2 class="section-title">Du temps libéré,<br>des résultats concrets</h2>
+    <p class="section-intro">Chaque service est conçu pour retirer une charge de votre équipe — pas pour ajouter une ressource à gérer. Vous déléguez, je délivre.</p>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">📥</div>
+        <span class="service-num">01</span>
+        <h3 class="service-title">Vos leads transformés en opportunités</h3>
+        <p class="service-desc">Qualification ultra-réactive des demandes entrantes, détection des signaux d'achat forts et transmission immédiate à vos commerciaux. Zéro lead perdu, zéro délai.</p>
+        <div class="service-tags">
+          <span class="tag">CRM</span>
+          <span class="tag">Qualification</span>
+          <span class="tag">Hot leads</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📋</div>
+        <span class="service-num">02</span>
+        <h3 class="service-title">Vos dossiers toujours conformes</h3>
+        <p class="service-desc">Collecte, vérification et relance proactive des pièces manquantes. Vos dossiers sont complets, à jour et prêts — sans que vous ayez à y penser.</p>
+        <div class="service-tags">
+          <span class="tag">Conformité</span>
+          <span class="tag">Relance</span>
+          <span class="tag">Audit docs</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">💬</div>
+        <span class="service-num">03</span>
+        <h3 class="service-title">Vos clients entre de bonnes mains</h3>
+        <p class="service-desc">Un français impeccable à l'oral et à l'écrit, une écoute active, une gestion des litiges sans escalade. Vos clients se sentent compris — et restent fidèles.</p>
+        <div class="service-tags">
+          <span class="tag">Téléphone</span>
+          <span class="tag">Email</span>
+          <span class="tag">Litiges</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🤝</div>
+        <span class="service-num">04</span>
+        <h3 class="service-title">Votre pipeline fluidifié</h3>
+        <p class="service-desc">Je joue le rôle de pont entre vos prospects qualifiés et votre force de vente. Agendas, devis, relances — tout est orchestré pour que vos commerciaux ne perdent plus de temps.</p>
+        <div class="service-tags">
+          <span class="tag">Coordination</span>
+          <span class="tag">Devis</span>
+          <span class="tag">Pipeline</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📊</div>
+        <span class="service-num">05</span>
+        <h3 class="service-title">Votre activité pilotée en temps réel</h3>
+        <p class="service-desc">Tableaux de bord, reporting quotidien ou hebdomadaire, mise à jour CRM — vous avez une visibilité totale sur votre activité sans lever le petit doigt.</p>
+        <div class="service-tags">
+          <span class="tag">Reporting</span>
+          <span class="tag">CRM</span>
+          <span class="tag">KPIs</span>
+        </div>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✉️</div>
+        <span class="service-num">06</span>
+        <h3 class="service-title">Votre réputation préservée à l'écrit</h3>
+        <p class="service-desc">Rédaction soignée, relances bien dosées, réponses professionnelles — chaque email envoyé sous votre nom reflète le niveau d'exigence que vous vous imposez.</p>
+        <div class="service-tags">
+          <span class="tag">Rédaction</span>
+          <span class="tag">Relances</span>
+          <span class="tag">Ton pro</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPÉRIENCE -->
+<section id="experience">
+  <div class="container">
+    <p class="section-label">Parcours</p>
+    <h2 class="section-title">Expériences qui<br>ont forgé ma méthode</h2>
+    <div class="exp-layout">
+      <div class="exp-nav">
+        <div class="exp-nav-item active">
+          <div class="exp-nav-date">Depuis déc. 2024</div>
+          <div class="exp-nav-company">GetHumanCall / Autohero</div>
+        </div>
+        <div class="exp-nav-item">
+          <div class="exp-nav-date">Jan. 2022 – Nov. 2024</div>
+          <div class="exp-nav-company">Téléperformance / Banque Nickel</div>
+        </div>
+      </div>
+      <div class="exp-entries">
+        <div class="exp-entry">
+          <div class="exp-entry-header">
+            <h3 class="exp-role">Assistant Commercial Back-Office</h3>
+            <span class="exp-period">Déc. 2024 — En poste</span>
+          </div>
+          <p class="exp-company">GetHumanCall — Remote depuis Madagascar · Connexion dédiée + backup en cas de coupure</p>
+          <div class="exp-highlight">
+            Bras droit opérationnel d'<strong>Autohero</strong>, leader européen de la vente de voitures en ligne — en flux tendu, chaque jour
+          </div>
+          <ul class="exp-list">
+            <li><strong>Réactivité commerciale :</strong> Qualification ultra-rapide des leads entrants dès l'ouverture, détection des intentions d'achat sérieuses et transmission immédiate aux commerciaux à Paris — sans filtre inutile, sans délai.</li>
+            <li><strong>Rigueur documentaire :</strong> Audit complet des fiches véhicules et équipements avant publication, contrôle minutieux via Google Doc et fiches techniques pour garantir des annonces irréprochables.</li>
+            <li><strong>Sérénité administrative :</strong> Gestion documentaire des commandes clients, relance proactive pour dossiers 100% conformes et mise à jour CRM en temps réel — votre back-office tourne sans friction.</li>
+            <li><strong>Continuité opérationnelle :</strong> Intégré à une équipe internationale en full remote, je travaille aux horaires français avec une connexion dédiée et un système de backup pour garantir ma disponibilité sans interruption.</li>
+          </ul>
+        </div>
+        <div class="exp-entry">
+          <div class="exp-entry-header">
+            <h3 class="exp-role">Conseiller Clientèle Bancaire</h3>
+            <span class="exp-period">Jan. 2022 – Nov. 2024</span>
+          </div>
+          <p class="exp-company">Téléperformance Madagascar — Projet Banque Nickel · 3 ans de terrain</p>
+          <div class="exp-highlight">
+            3 ans à représenter la voix de <strong>Banque Nickel</strong> — école de l'excellence relationnelle en milieu exigeant
+          </div>
+          <ul class="exp-list">
+            <li><strong>Satisfaction client préservée :</strong> Premier point de contact pour des clients parfois en détresse financière, avec une approche toujours humaine, sans script robotique.</li>
+            <li><strong>Litiges transformés en fidélité :</strong> Résolution de situations complexes (blocages, réclamations, conformité) grâce à l'écoute active et la pédagogie — clients apaisés, comptes conservés.</li>
+            <li><strong>Fiabilisation des dossiers :</strong> Suivi rigoureux des cas ouverts et clôture dans les délais, contribuant directement aux indicateurs de qualité de l'équipe.</li>
+            <li><strong>Performance collective :</strong> Acteur engagé dans l'atteinte des objectifs d'équipe, avec une constance reconnue par l'encadrement sur 3 années consécutives.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPÉTENCES -->
+<section id="competences">
+  <div class="container">
+    <p class="section-label">Savoir-faire</p>
+    <h2 class="section-title">Ce que je maîtrise,<br>ce que vous gagnez</h2>
+    <p class="section-intro">Un profil polyvalent — support client, back-office, assistance commerciale — avec une organisation pensée pour le remote francophone et une connexion fiable au quotidien.</p>
+    <div class="skills-layout">
+      <div>
+        <h4 class="skill-group-title">Compétences métier</h4>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Support commercial & qualification leads</span><span class="skill-level">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 92%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Gestion administrative & dossiers</span><span class="skill-level">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Service client & gestion des litiges</span><span class="skill-level">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 95%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Coordination commerciale</span><span class="skill-level">Avancé</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 80%"></div></div>
+        </div>
+        <div class="skill-item">
+          <div class="skill-header"><span class="skill-name">Relance téléphonique & emailing</span><span class="skill-level">Expert</span></div>
+          <div class="skill-bar"><div class="skill-fill" style="width: 88%"></div></div>
+        </div>
+        <h4 class="skill-group-title" style="margin-top: 2rem;">Langues</h4>
+        <div class="lang-item">
+          <span class="lang-name">Français</span>
+          <span class="lang-badge">Oral &amp; écrit</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Anglais</span>
+          <span class="lang-badge">Notions de base</span>
+        </div>
+        <div class="lang-item">
+          <span class="lang-name">Malgache</span>
+          <span class="lang-badge">Langue maternelle</span>
+        </div>
+      </div>
+      <div>
+        <h4 class="skill-group-title">Outils & environnement</h4>
+        <div class="tools-grid">
+          <div class="tool-item"><span class="tool-dot"></span>CRM (Salesforce, HubSpot)</div>
+          <div class="tool-item"><span class="tool-dot"></span>Suite Google Workspace</div>
+          <div class="tool-item"><span class="tool-dot"></span>Microsoft Office 365</div>
+          <div class="tool-item"><span class="tool-dot"></span>Slack / Teams</div>
+          <div class="tool-item"><span class="tool-dot"></span>Trello / Notion</div>
+          <div class="tool-item"><span class="tool-dot"></span>Zoom / Meet</div>
+          <div class="tool-item"><span class="tool-dot"></span>Outils de ticketing</div>
+          <div class="tool-item"><span class="tool-dot"></span>Gestion documentaire</div>
+        </div>
+        <h4 class="skill-group-title" style="margin-top: 2rem;">Disponibilité & fiabilité</h4>
+        <div class="tools-grid">
+          <div class="tool-item"><span class="tool-dot"></span>Connexion internet dédiée</div>
+          <div class="tool-item"><span class="tool-dot"></span>Backup en cas de coupure</div>
+          <div class="tool-item"><span class="tool-dot"></span>Horaires calés sur Paris</div>
+          <div class="tool-item"><span class="tool-dot"></span>Disponible 08h–18h (Paris)</div>
+        </div>
+        <h4 class="skill-group-title" style="margin-top: 2rem;">Qualités personnelles</h4>
+        <div class="tools-grid">
+          <div class="tool-item"><span class="tool-dot"></span>Rigueur & organisation</div>
+          <div class="tool-item"><span class="tool-dot"></span>Autonomie en remote</div>
+          <div class="tool-item"><span class="tool-dot"></span>Empathie client</div>
+          <div class="tool-item"><span class="tool-dot"></span>Réactivité</div>
+          <div class="tool-item"><span class="tool-dot"></span>Esprit d'équipe</div>
+          <div class="tool-item"><span class="tool-dot"></span>Adaptabilité</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JOURNÉE TYPE + CAS CONCRET -->
+<section id="quotidien" style="background: var(--white); padding: 5rem 0;">
+  <div class="container">
+    <p class="section-label">En pratique</p>
+    <h2 class="section-title">Comment je<br>travaille pour vous</h2>
+    <p class="section-intro">Une journée type calée sur vos horaires parisiens — et un cas réel pour vous montrer comment je gère les situations qui font perdre du temps.</p>
+
+    <div style="margin-top: 3rem; display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--border); border: 1px solid var(--border);">
+
+      <!-- JOURNÉE TYPE -->
+      <div style="background: var(--white); padding: 2.5rem 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border);">
+          <div style="width: 36px; height: 36px; background: var(--navy); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">🕐</div>
+          <div>
+            <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.1rem;">Routine quotidienne</div>
+            <div style="font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--navy);">Ma journée type en remote</div>
+          </div>
+        </div>
+        <div style="display: inline-flex; align-items: center; gap: 0.5rem; background: #EAF7F0; border: 1px solid #B6E4CF; color: var(--success); font-size: 0.75rem; font-weight: 500; padding: 0.35rem 0.85rem; border-radius: 2px; margin-bottom: 1.5rem;">
+          🌍 08h00–18h00 Paris / 10h00–20h00 Madagascar
+        </div>
+        <div style="position: relative; padding-left: 1.75rem;">
+          <div style="position: absolute; left: 6px; top: 6px; bottom: 6px; width: 1px; background: var(--border);"></div>
+
+          <div style="position: relative; margin-bottom: 1.35rem;">
+            <div style="position: absolute; left: -1.45rem; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--navy); border: 2px solid var(--white);"></div>
+            <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;">08h00 (Paris) / 10h00 (Mada)</div>
+            <div style="font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 2px;">🔌 Connexion & revue des urgences</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Prise en main des emails et messages Slack reçus. Identification des urgences et priorisation claire des actions du jour avant que votre équipe commence à Paris.</div>
+          </div>
+
+          <div style="position: relative; margin-bottom: 1.35rem;">
+            <div style="position: absolute; left: -1.45rem; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--navy); border: 2px solid var(--white);"></div>
+            <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;">08h30 (Paris) / 10h30 (Mada)</div>
+            <div style="font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 2px;">🎯 Qualification des leads chauds</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Analyse et scoring des demandes entrantes. Les opportunités sérieuses sont identifiées et transmises à votre équipe commerciale dès son arrivée au bureau — pipeline déjà prêt à 9h.</div>
+          </div>
+
+          <div style="position: relative; margin-bottom: 1.35rem;">
+            <div style="position: absolute; left: -1.45rem; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--accent); border: 2px solid var(--white);"></div>
+            <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;">10h00 – 12h00 (Paris) / 12h00 – 14h00 (Mada)</div>
+            <div style="font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 2px;">🤝 Collaboration active avec votre équipe</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Point sur les dossiers en cours, préparation des devis, échanges Slack ou visio avec les commerciaux. C'est le moment de pleine coordination — je suis disponible et réactif.</div>
+          </div>
+
+          <div style="position: relative; margin-bottom: 1.35rem;">
+            <div style="position: absolute; left: -1.45rem; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--navy); border: 2px solid var(--white);"></div>
+            <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;">13h30 – 17h00 (Paris) / 15h30 – 19h00 (Mada)</div>
+            <div style="font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 2px;">📂 Travail de fond — Back-office</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Audit documentaire, vérification des fiches équipements, relances clients pour dossiers conformes, mise à jour CRM en temps réel. Le travail de précision qui garantit que rien ne passe entre les mailles.</div>
+          </div>
+
+          <div style="position: relative;">
+            <div style="position: absolute; left: -1.45rem; top: 4px; width: 12px; height: 12px; border-radius: 50%; background: var(--success); border: 2px solid var(--white);"></div>
+            <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;">17h00 – 18h00 (Paris) / 19h00 – 20h00 (Mada)</div>
+            <div style="font-size: 0.9rem; font-weight: 500; color: var(--navy); margin-bottom: 2px;">📊 Clôture & rapport quotidien</div>
+            <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">Envoi du rapport de fin de journée avec un bilan clair des actions traitées. Préparation du pipeline pour le lendemain matin. Vous terminez votre journée avec une vue complète, sans avoir à chercher l'info.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CAS CONCRET -->
+      <div style="background: var(--cream); padding: 2.5rem 2rem;">
+        <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1.75rem; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border);">
+          <div style="width: 36px; height: 36px; background: var(--navy); border-radius: 2px; display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;">📁</div>
+          <div>
+            <div style="font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); margin-bottom: 0.1rem;">Cas réel — Banque Nickel</div>
+            <div style="font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--navy);">Conflit désamorcé, cliente fidélisée</div>
+          </div>
+        </div>
+
+        <!-- Contexte -->
+        <div style="background: rgba(13,35,64,0.05); border-radius: 2px; padding: 0.85rem 1rem; margin-bottom: 1.25rem; font-size: 0.82rem; color: var(--text-muted); line-height: 1.65;">
+          <span style="font-weight: 500; color: var(--navy);">Situation :</span> Appel entrant — une cliente agressive demande à ouvrir un compte Nickel pour son enfant de 16 ans, en exigeant de court-circuiter la procédure légale.
+        </div>
+
+        <!-- Problème -->
+        <div style="border-left: 3px solid #E24B4A; padding: 0.85rem 1rem; background: var(--white); margin-bottom: 0.85rem; border-radius: 0 2px 2px 0;">
+          <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #A32D2D; margin-bottom: 0.35rem;">⚠ Problème</div>
+          <div style="font-size: 0.88rem; font-weight: 500; color: var(--navy); margin-bottom: 0.3rem;">Ouverture de compte mineur hors procédure légale</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6;">La cliente réclame une ouverture de compte immédiate pour son fils de 16 ans, sans les documents obligatoires. Elle est agressive, conteste les règles et menace de porter plainte contre Nickel.</div>
+        </div>
+
+        <!-- Actions -->
+        <div style="border-left: 3px solid var(--accent); padding: 0.85rem 1rem; background: var(--white); margin-bottom: 0.85rem; border-radius: 0 2px 2px 0;">
+          <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #854F0B; margin-bottom: 0.5rem;">→ Mes actions</div>
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 0.45rem;">
+            <li style="font-size: 0.82rem; color: var(--text-muted); padding-left: 1rem; position: relative; line-height: 1.55;"><span style="position: absolute; left: 0; color: var(--accent);">·</span>Écoute active et reformulation bienveillante pour désamorcer l'agressivité sans céder à la pression.</li>
+            <li style="font-size: 0.82rem; color: var(--text-muted); padding-left: 1rem; position: relative; line-height: 1.55;"><span style="position: absolute; left: 0; color: var(--accent);">·</span>Pédagogie claire sur les règles de conformité bancaire et les protections légales pour les mineurs.</li>
+            <li style="font-size: 0.82rem; color: var(--text-muted); padding-left: 1rem; position: relative; line-height: 1.55;"><span style="position: absolute; left: 0; color: var(--accent);">·</span>Proposition de la solution légale adaptée : ouverture d'un compte mineur avec les bons justificatifs.</li>
+            <li style="font-size: 0.82rem; color: var(--text-muted); padding-left: 1rem; position: relative; line-height: 1.55;"><span style="position: absolute; left: 0; color: var(--accent);">·</span>Accompagnement complet de la cliente en ligne, étape par étape, jusqu'à la validation du dossier.</li>
+            <li style="font-size: 0.82rem; color: var(--text-muted); padding-left: 1rem; position: relative; line-height: 1.55;"><span style="position: absolute; left: 0; color: var(--accent);">·</span>Génération du code de retrait de carte et confirmation de l'ouverture réussie en direct.</li>
+          </ul>
+        </div>
+
+        <!-- Résultat -->
+        <div style="border-left: 3px solid var(--success); padding: 0.85rem 1rem; background: var(--white); border-radius: 0 2px 2px 0;">
+          <div style="font-size: 0.68rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; color: #0F6E56; margin-bottom: 0.35rem;">✓ Résultat</div>
+          <div style="font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 0.85rem;">La cliente, initialement hostile, a terminé l'appel soulagée et reconnaissante. Compte ouvert dans les règles, conflit entièrement résolu, aucune escalade ni plainte déposée.</div>
+          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.5rem;">
+            <div style="background: var(--cream); border-radius: 2px; padding: 0.6rem 0.5rem; text-align: center;">
+              <div style="font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--navy);">100%</div>
+              <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px;">Légal & conforme</div>
+            </div>
+            <div style="background: var(--cream); border-radius: 2px; padding: 0.6rem 0.5rem; text-align: center;">
+              <div style="font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--navy);">0</div>
+              <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px;">Escalade</div>
+            </div>
+            <div style="background: var(--cream); border-radius: 2px; padding: 0.6rem 0.5rem; text-align: center;">
+              <div style="font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: var(--navy);">✓</div>
+              <div style="font-size: 0.68rem; color: var(--text-muted); margin-top: 2px;">Cliente fidélisée</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- OFFRES -->
+<section id="offres">
+  <div class="container">
+    <p class="section-label">Investissement</p>
+    <h2 class="section-title">Du temps libéré,<br>de la sérénité opérationnelle</h2>
+    <p class="section-intro">Je ne vends pas des heures. Je vous offre la tranquillité de savoir que vos opérations tournent — sans que vous ayez à y penser.</p>
+    <div class="offres-grid">
+      <div class="offre-card">
+        <span class="offre-badge standard">Mission ponctuelle</span>
+        <h3 class="offre-name">Coup de main</h3>
+        <div class="offre-price">Sur devis</div>
+        <p class="offre-period">Résultat livré en 48–72h chrono</p>
+        <ul class="offre-features">
+          <li>Un pic d'activité à absorber sans recruter</li>
+          <li>Une liste de leads à qualifier d'urgence</li>
+          <li>Des dossiers en retard à remettre en ordre</li>
+          <li>Une campagne de relances à lancer</li>
+          <li>Zéro engagement, 100% de résultat</li>
+        </ul>
+        <a href="#contact" class="offre-btn dark">Obtenir un devis rapide</a>
+      </div>
+      <div class="offre-card featured">
+        <span class="offre-badge popular">⭐ Le plus choisi</span>
+        <h3 class="offre-name">Sérénité</h3>
+        <div class="offre-price">Mi-temps</div>
+        <p class="offre-period">20h/semaine — votre back-office en pilotage automatique</p>
+        <ul class="offre-features">
+          <li>Vos leads qualifiés chaque matin avant 9h</li>
+          <li>Vos dossiers conformes sans relancer personne</li>
+          <li>Vos clients traités avec soin en français parfait</li>
+          <li>Un reporting hebdomadaire clair sur votre bureau</li>
+          <li>Une coordination fluide avec votre équipe Paris</li>
+          <li>Connexion stable et backup en cas de coupure</li>
+        </ul>
+        <a href="#contact" class="offre-btn gold">Libérer mon temps maintenant</a>
+      </div>
+      <div class="offre-card">
+        <span class="offre-badge premium">Partenaire intégré</span>
+        <h3 class="offre-name">Tranquillité totale</h3>
+        <div class="offre-price">Temps plein</div>
+        <p class="offre-period">35–40h/sem. — je deviens votre bras droit opérationnel</p>
+        <ul class="offre-features">
+          <li>Intégration complète à votre équipe et vos outils</li>
+          <li>Gestion totale du back-office commercial</li>
+          <li>Reporting quotidien — visibilité en temps réel</li>
+          <li>Réactivité maximale sur tous les canaux</li>
+          <li>Point visio hebdomadaire inclus</li>
+          <li>Vous pilotez, je m'occupe du reste</li>
+        </ul>
+        <a href="#contact" class="offre-btn dark">Parlons-en</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <p class="section-label">Contact</p>
+    <h2 class="section-title">Travaillons<br>ensemble</h2>
+    <div class="contact-layout">
+      <div class="contact-info">
+        <p style="font-size: 1rem; color: var(--text-muted); line-height: 1.75; margin-bottom: 1rem;">
+          Vous cherchez un assistant commercial fiable, disponible en remote, qui parle un français impeccable ? Décrivez-moi votre besoin, je vous réponds sous 24h.
+        </p>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-item-label">Email</div>
+            <div class="contact-item-value"><a href="mailto:ranaivozananyjuddy@gmail.com">ranaivozananyjuddy@gmail.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-item-label">Téléphone / WhatsApp</div>
+            <div class="contact-item-value"><a href="tel:+261344415818">+261 34 44 158 18</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">💼</div>
+          <div>
+            <div class="contact-item-label">LinkedIn</div>
+            <div class="contact-item-value"><a href="https://www.linkedin.com/in/juddy-michael-backoffice" target="_blank">linkedin.com/in/juddy-michael-backoffice</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-item-label">Localisation</div>
+            <div class="contact-item-value">Antananarivo, Madagascar<br><span style="font-size: 0.82rem; color: var(--text-muted); font-weight: 400;">Fuseau UTC+3 — adapté aux équipes françaises</span></div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form" onsubmit="handleSubmit(event)">
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label">Prénom</label>
+            <input type="text" class="form-input" placeholder="Marie" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Nom</label>
+            <input type="text" class="form-input" placeholder="Dupont">
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Email professionnel</label>
+          <input type="email" class="form-input" placeholder="marie@entreprise.fr" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Type de mission</label>
+          <select class="form-select">
+            <option value="">Sélectionner...</option>
+            <option>Traitement leads / support commercial</option>
+            <option>Gestion administrative</option>
+            <option>Support client francophone</option>
+            <option>Mission ponctuelle</option>
+            <option>Temps partiel (20h/sem.)</option>
+            <option>Temps plein (remote)</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Décrivez votre besoin</label>
+          <textarea class="form-textarea" placeholder="Dites-moi en quelques lignes votre contexte, votre besoin et le démarrage souhaité..." required></textarea>
+        </div>
+        <button type="submit" class="form-submit">Envoyer ma demande →</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Juddy <span>Michaël</span> Ranaivozanany</div>
+    <p class="footer-text">Support client · Back-office · Assistance commerciale · Remote · Francophone · Madagascar</p>
+    <div class="footer-links">
+      <a href="mailto:ranaivozananyjuddy@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/juddy-michael-backoffice" target="_blank">LinkedIn</a>
+      <a href="tel:+261344415818">Téléphone</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function handleSubmit(e) {
+  e.preventDefault();
+  const btn = e.target.querySelector('.form-submit');
+  btn.textContent = '✓ Message envoyé !';
+  btn.style.background = '#2A7D5F';
+  setTimeout(() => {
+    btn.textContent = 'Envoyer ma demande →';
+    btn.style.background = '';
+    e.target.reset();
+  }, 3000);
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.querySelectorAll('.skill-fill').forEach(bar => {
+        bar.style.width = bar.style.width;
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+document.querySelectorAll('#competences').forEach(el => observer.observe(el));
+</script>
+</body>
+</html>
